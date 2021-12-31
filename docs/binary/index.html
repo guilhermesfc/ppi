@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<title>Photographic Processes Identification</title>
+<!-- bs4 css -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+<!-- css pie -->
+<link rel="stylesheet" href="pie.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- TensorFlow.js script -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <a class="navbar-brand" href="#"><h1>Photographic Process Identification</h1></a>
+  </nav>
+<div class="container-fluid"> 
+
+
+<div class="row">
+  <div class="col" style ='margin-left:100px; margin-right:100px;; flex-grow: 0' >
+<h4 id ='status' style = 'margin-top:40px; '>Loading Model... Please be patient </h4>	  
+<canvas id="canvas" width="400" height="400" style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
+<div class="btn-group" style = 'margin-top:40px; '>
+<input type="file" id="imageLoader" name="imageLoader" disabled />
+</div>    
+</div>
+  <div class="col">
+    <section style="margin-top:120px">
+    <div class="pieID pie">  
+    </div>
+    <ul class="pieID legend">
+      <li>
+        <em id = "sym1"></em>
+        <span id = "prob1" ></span>
+      </li>
+      <li>
+        <em id = "sym2"></em>
+        <span id = "prob2"></span>
+      </li>
+    </ul>
+  </section>
+  <p style ='margin-left:50px; margin-top:100px'>Please consider the following guidelines for accurate results:
+    <ul>
+      <li style ='margin-left:70px;'>Use historical high quality jpeg/png images (minimum 1MB before crop)</li>
+      <li style ='margin-left:70px;'>Avoid significantly hand-coloured images</li>
+      <li style ='margin-left:70px;'>Crop non relevant portions of image before upload</li>
+      </ul>
+  </p>
+  <p style="margin:10px;margin-left:40px">Please see <a href="https://github.com/guilhermesfc/ppi">github repo</a> for code and additional info.</p>
+</div>
+</div>  
+</body>
+
+<script src="pie.js"></script>
+<!-- main script -->
+<script src = "main.js" > </script>
+<script>
+	console.log('starting');
+	start()
+</script>
+
+</html>

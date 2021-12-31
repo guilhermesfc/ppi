@@ -1,0 +1,1 @@
+This is an ongoing attempt to build a deep learning based tool for identifying photographic processes using a digital copy.
