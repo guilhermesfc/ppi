@@ -1,4 +1,5 @@
-aux_code.ipynb
+IMAGES*
 ppi.db
 .vscode
-myconfig.yaml
+.DS_Store
+*__pycache__*
